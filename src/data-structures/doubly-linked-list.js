@@ -9,7 +9,7 @@ function DoubleNode(data) {
   Node.call(this, data);
 };
 
-// create constructore with LinkedList inheritance
+// create constructor with LinkedList inheritance
 function DoublyLinkedList(data) {
   // LinkedList.call(this, data);
   if (data.length > 0) {
