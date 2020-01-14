@@ -57,14 +57,14 @@ DoublyLinkedList.prototype.insert = function(data, index) {
       newNode.prev = curr;
       newNode.next = temp;
       temp.prev = newNode;
-      return newNode;
+      return this;
     }
     curr = curr.next;
     ++currIndex;
   }
   curr.next = newNode;
   newNode.prev = curr;
-  return newNode;
+  return this;
 };
 
 DoublyLinkedList.prototype.shift = function() {
@@ -73,7 +73,7 @@ DoublyLinkedList.prototype.shift = function() {
 
   this.head = first.next;
   this.head.prev = null;
-  return first;
+  return first.data;
 };
 
 DoublyLinkedList.prototype.delete = function(index) {
@@ -81,7 +81,7 @@ DoublyLinkedList.prototype.delete = function(index) {
 
   if (index === 0) {
     this.head = this.head.next;
-    return this.head;
+    return this;
   }
 
   let curr = this.head;
@@ -94,13 +94,13 @@ DoublyLinkedList.prototype.delete = function(index) {
 
       prev.next = next;
       next.prev = prev;
-      return this.head;
+      return this;
     }
     prev = curr;
     curr = curr.next;
     ++currIndex;
   }
-  return this.head;
+  return this;
 };
 
 DoublyLinkedList.prototype.reverse = function() {
@@ -117,7 +117,7 @@ DoublyLinkedList.prototype.reverse = function() {
     curr = next;
   }
   this.head = prev;
-  return this.head;
+  return this;
 };
 
 /**
@@ -137,7 +137,7 @@ DoublyLinkedList.prototype.reverseRecursion = function() {
   };
 
   reverse(this.head);
-  return this.head;
+  return this;
 };
 
 module.exports = DoublyLinkedList;

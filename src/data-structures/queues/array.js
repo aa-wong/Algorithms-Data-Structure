@@ -1,12 +1,12 @@
 'use strict';
 
-function ArrayQueue() {
+function QueueArray() {
   this._queue = Array(10).fill(null);
   this._front = -1;
   this._rear = -1;
 }
 
-ArrayQueue.prototype = {
+QueueArray.prototype = {
   enqueue: function(x) {
     if ((this._rear + 1) % this._queue.length === this._front) return;
     if (this.isEmpty()) this._rear = this._front = 0;
@@ -37,4 +37,4 @@ ArrayQueue.prototype = {
   }
 };
 
-module.exports = ArrayQueue;
+module.exports = QueueArray;

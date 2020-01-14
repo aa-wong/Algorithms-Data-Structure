@@ -43,15 +43,17 @@ Node.prototype = {
   },
 
   search: function(data) {
-    if (!this.data) return false;
+    if (!this.data) return null;
+    if (data === this.data) return this;
     if (data > this.data && this.right) return this.right.search(data);
     if (data < this.data && this.left) return this.left.search(data);
-    return data === this.data;
+    return null;
   }
 };
 
 function BinarySearchTree(data) {
-  this._root = new Node(data);
+  if (Array.isArray(data)) data.forEach(n => this.insert(n));
+  else this._root = new Node(data);
 };
 
 BinarySearchTree.prototype = {
@@ -66,31 +68,37 @@ BinarySearchTree.prototype = {
   insert: function(data) {
     if (!this.root) this.root = new Node(data);
     else this.root.insert(data);
+    return this;
+  },
+
+  has: function(data) {
+    if (!this.root) return false;
+    return this.root.search(data) !== null;
   },
 
   search: function(data) {
-    if (!this.root) return false;
+    if (!this.root) return null;
     return this.root.search(data);
   },
 
-  findMin: function() {
+  findMin: function(node) {
     if (!this.root) return;
     const getMin = (node) => {
       if (node.left) return getMin(node.left);
       return node.data;
     };
 
-    return getMin(this.root);
+    return !node ? getMin(this.root) : getMin(node);
   },
 
-  findMax: function() {
+  findMax: function(node) {
     if (!this.root) return;
     const getMax = (node) => {
       if (node.right) return getMax(node.right);
       return node.data;
     };
 
-    return getMax(this.root);
+    return !node ? getMax(this.root) : getMax(node);
   },
 
   delete: function(val) {
@@ -118,6 +126,7 @@ BinarySearchTree.prototype = {
     };
 
     deleteNode(this.root, val);
+    return this;
   },
 
   levelOrder: function() {
@@ -221,6 +230,26 @@ BinarySearchTree.prototype = {
     };
 
     return validateSymmetry(this.root.left, this.root.right);
+  },
+
+  getSuccessor: function(data) {
+    // Search the node
+    let curr = this.search(data);
+
+    if (!curr) return null;
+    // Case 1: Node has right subtree
+    if (curr.right !== undefined) return this.findMin(curr.right);
+    // Case 2: No right subtree
+    let successor = null;
+    let ancestor = this.root;
+
+    while (ancestor !== curr) {
+      if (curr.data < ancestor.data) {
+        successor = ancestor;
+        ancestor = ancestor.left;
+      } else ancestor = ancestor.right;
+    }
+    return successor.data;
   }
 };
 

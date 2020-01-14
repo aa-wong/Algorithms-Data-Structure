@@ -73,7 +73,7 @@ LinkedList.prototype = {
 
     if (!this.head) {
       this.head = newNode;
-      return this.head;
+      return this;
     }
 
     if (index === 0) {
@@ -81,7 +81,7 @@ LinkedList.prototype = {
 
       this.head = newNode;
       this.head.next = temp;
-      return this.head;
+      return this;
     }
 
     let curr = this.head;
@@ -93,13 +93,13 @@ LinkedList.prototype = {
 
         curr.next = newNode;
         newNode.next = temp;
-        return newNode;
+        return this;
       }
       curr = curr.next;
       ++currIndex;
     }
     curr.next = newNode;
-    return newNode;
+    return this;
   },
 
   /**
@@ -111,7 +111,7 @@ LinkedList.prototype = {
     const first = this.head;
 
     this.head = this.head.next;
-    return first;
+    return first.data;
   },
 
   /**
@@ -128,7 +128,7 @@ LinkedList.prototype = {
       curr = curr.next;
     }
     prev.next = null;
-    return curr;
+    return curr.data;
   },
 
   /**
@@ -141,7 +141,7 @@ LinkedList.prototype = {
 
     if (index === 0) {
       this.head = this.head.next;
-      return this.head;
+      return this;
     }
 
     let curr = this.head;
@@ -151,13 +151,13 @@ LinkedList.prototype = {
     while (curr.next) {
       if (index !== undefined && currIndex === index) {
         prev.next = curr.next;
-        return this.head;
+        return this;
       }
       prev = curr;
       curr = curr.next;
       ++currIndex;
     }
-    return this.head;
+    return this;
   },
   /**
    * Reverse LinkList
@@ -176,7 +176,7 @@ LinkedList.prototype = {
       curr = next;
     }
     this.head = prev;
-    return this.head;
+    return this;
   },
 
   /**

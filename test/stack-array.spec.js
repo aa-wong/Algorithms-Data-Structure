@@ -10,18 +10,18 @@ const expect = chai.expect;
 let lib;
 
 /**
- * LinkedListStack
- * @type {LinkedListStack}
+ * StackArray
+ * @type {StackArray}
  */
-describe('Given an instance of LinkedListStack', () => {
+describe('Given an instance of StackArray', () => {
   before(() => {
-    const { LinkedListStack } = DataStructures;
-    lib = new LinkedListStack();
+    const { StackArray } = DataStructures.stacks;
+    lib = new StackArray();
   });
   /**
    * isEmpty
    */
-  describe('when running LinkedListStack.isEmpty', () => {
+  describe('when running StackArray.isEmpty', () => {
     it('isEmpty() returns true.', () => {
       expect(lib.isEmpty()).to.be.equal(true);
     });
@@ -29,16 +29,16 @@ describe('Given an instance of LinkedListStack', () => {
   /**
    * push
    */
-  describe('when running LinkedListStack.push()', () => {
+  describe('when running StackArray.push()', () => {
     it('push() to store all elements in [10, 6, 14, 3, 22, 4, 3, 8, 11, 12].', () => {
       [10, 6, 14, 3, 22, 4, 3, 8, 11, 12].forEach(n => lib.push(n));
-      expect(lib.toArray()).to.be.an('array').to.include.members([10, 6, 14, 3, 22, 4, 3, 8, 11, 12]);
+      expect(lib._stack).to.be.an('array').to.include.members([10, 6, 14, 3, 22, 4, 3, 8, 11, 12]);
     });
   });
   /**
    * pop
    */
-  describe('when running LinkedListStack.pop()', () => {
+  describe('when running StackArray.pop()', () => {
     it('pop() returns value of 12.', () => {
       expect(lib.pop()).to.be.equal(12);
     });
@@ -46,7 +46,7 @@ describe('Given an instance of LinkedListStack', () => {
   /**
    * top
    */
-  describe('when running LinkedListStack.top()', () => {
+  describe('when running StackArray.top()', () => {
     it('top() returns node with value of 11.', () => {
       expect(lib.top()).to.be.equal(11);
     });
@@ -54,7 +54,7 @@ describe('Given an instance of LinkedListStack', () => {
   /**
    * isEmpty
    */
-  describe('when running LinkedListStack.isEmpty', () => {
+  describe('when running StackArray.isEmpty', () => {
     it('isEmpty() returns false.', () => {
       expect(lib.isEmpty()).to.be.equal(false);
     });

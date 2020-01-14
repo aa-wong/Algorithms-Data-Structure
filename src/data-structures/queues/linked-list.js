@@ -4,9 +4,9 @@ function Node(val) {
   this.data = val;
 }
 
-function LinkListQueue() {}
+function QueueLinkList() {}
 
-LinkListQueue.prototype = {
+QueueLinkList.prototype = {
   enqueue: function(val) {
     if (this.isEmpty()) this._rear = this._front = new Node(val);
     else this._rear = this._rear.next = new Node(val);
@@ -29,4 +29,4 @@ LinkListQueue.prototype = {
   }
 };
 
-module.exports = LinkListQueue;
+module.exports = QueueLinkList;

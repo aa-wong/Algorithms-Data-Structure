@@ -1,11 +1,11 @@
 'use strict';
 
-function ArrayStack() {
+function StackArray() {
   this._stack = [];
   this._top = -1;
 }
 
-ArrayStack.prototype = {
+StackArray.prototype = {
   push: function(data) {
     ++this._top;
     if (this._stack.length >= this._top + 1) this._stack[this._top] = data;
@@ -31,4 +31,4 @@ ArrayStack.prototype = {
   }
 };
 
-module.exports = ArrayStack;
+module.exports = StackArray;

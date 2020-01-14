@@ -11,18 +11,18 @@ function Node(data) {
  * @param       {[type]} data [description]
  * @constructor
  */
-function LinkedListStack() {}
+function StackLinkedList() {}
 /**
  * Print Link list in recursive fashion
  * @param  {[type]} node [description]
  * @return {[type]}      [description]
  */
-LinkedListStack.printRecursion = function(node) {
+StackLinkedList.printRecursion = function(node) {
   if (!node) return null;
-  return LinkedListStack.printRecursion(node.next);
+  return StackLinkedList.printRecursion(node.next);
 };
 
-LinkedListStack.prototype = {
+StackLinkedList.prototype = {
   /**
    * Print all values in a linklist
    * @return {[type]} [description]
@@ -62,7 +62,7 @@ LinkedListStack.prototype = {
 
     newNode.next = this.head;
     this.head = newNode;
-    return this.head.data;
+    return this;
   },
 
   /**
@@ -92,7 +92,7 @@ LinkedListStack.prototype = {
    */
   reverse: function() {
     // Create a stack to store the linklist values
-    const stack = new LinkedListStack();
+    const stack = new StackLinkedList();
 
     // push all link list values in stack by shifting the first value.
     while (this.head) stack.push(this.shift());
@@ -103,4 +103,4 @@ LinkedListStack.prototype = {
   }
 };
 
-module.exports = LinkedListStack;
+module.exports = StackLinkedList;
