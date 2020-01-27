@@ -1,5 +1,5 @@
 # algo.js
-Javascript Library of algorithms and data structures created to refine algorithm skill
+Javascript Library of algorithms and data structures created to refine algorithm skills.
 
 ## Features
 
