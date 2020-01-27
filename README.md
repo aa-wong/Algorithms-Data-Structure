@@ -34,7 +34,7 @@ Use the algo.min.js file found in the lib directory.
 import {
   dataStructures,
   algorithms
-} from '../lib/algo.min.js';
+} from './algo.min.js';
 
 const {
   stacks,
