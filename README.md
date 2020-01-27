@@ -29,13 +29,16 @@ Use the algo.min.js file found in the lib directory.
 
 ```js
 /**
- * dataStructures
+ * Import library
  */
 import {
   dataStructures,
   algorithms
 } from './algo.min.js';
 
+/**
+ * Data Structures
+ */
 const {
   BinarySearchTree,
   Graph,
