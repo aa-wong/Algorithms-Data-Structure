@@ -52,7 +52,7 @@ const bst = new BinarySearchTree();
 const stack = new stacks.StackLinkedList();
 
 /**
- * Sorting array Algorithms
+ * Array Sorting Algorithms
  */
 const {
   selectionSort,
