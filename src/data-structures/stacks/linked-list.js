@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Node for link list
  * @param       {[type]} data [description]

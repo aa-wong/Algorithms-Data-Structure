@@ -1,7 +1,7 @@
 /* global describe, it, before */
 
 import chai from 'chai';
-import { DataStructures } from '../lib/Algorithms.js';
+import { dataStructures } from '../lib/algo.js';
 
 chai.expect();
 
@@ -15,7 +15,7 @@ let lib;
  */
 describe('Given an instance of StackLinkedList', () => {
   before(() => {
-    const { StackLinkedList } = DataStructures.stacks;
+    const { StackLinkedList } = dataStructures.stacks;
     lib = new StackLinkedList();
   });
   /**

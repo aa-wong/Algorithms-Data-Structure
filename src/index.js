@@ -1,5 +1,9 @@
 'use strict';
 
-import DataStructures from './data-structures';
+import dataStructures from './data-structures';
+import algorithms from './algorithms';
 
-export { DataStructures };
+export {
+  dataStructures,
+  algorithms
+};
