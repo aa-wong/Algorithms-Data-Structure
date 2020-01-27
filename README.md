@@ -37,8 +37,11 @@ import {
 } from './algo.min.js';
 
 const {
-  stacks,
-  BinarySearchTree
+  BinarySearchTree,
+  Graph,
+  linkedLists,
+  queues,
+  stacks
 } = dataStructures;
 
 const bst = new BinarySearchTree();
