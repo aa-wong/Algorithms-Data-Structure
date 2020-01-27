@@ -4,13 +4,17 @@ Javascript Library of algorithms and data structures created to refine algorithm
 ## Features
 
 * Data Structures
-  - ArrayQueue
-  - ArrayStack
   - BinarySearchTree
-  - LinkedListQueue
-  - LinkedListStack
-  - LinkedList
-  - DoublyLinkedList
+  - Graph
+  - linkedLists
+    - LinkedList
+    - DoublyLinkedList
+  - queues
+    - ArrayQueue
+    - LinkedListQueue
+  - stacks
+    - ArrayStack
+    - LinkedListStack
 
 * Algorithms
   - sorting
