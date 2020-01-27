@@ -1,4 +1,4 @@
-# Algorithms.js
+# algo.js
 Javascript Library of algorithms and data structures created to refine algorithm skill
 
 ## Features
@@ -13,14 +13,45 @@ Javascript Library of algorithms and data structures created to refine algorithm
   - DoublyLinkedList
 
 * Algorithms
+  - sorting
+    - selectionSort
+    - bubbleSort
+    - insertionSort
+    - mergeSort
+    - quickSort
 
 ## Getting started
-Use the Algorithms.min.js file found in the lib directory.
+Use the algo.min.js file found in the lib directory.
 
 ```js
+/**
+ * dataStructures
+ */
 import {
-  DataStructures,
-  Algorithms
-} from '../lib/Algorithms.min.js';
+  dataStructures,
+  algorithms
+} from '../lib/algo.min.js';
+
+const {
+  stacks,
+  BinarySearchTree
+} = dataStructures;
+
+const bst = new BinarySearchTree();
+
+const stack = new stacks.StackLinkedList();
+
+/**
+ * Sorting array Algorithms
+ */
+const {
+  selectionSort,
+  bubbleSort,
+  insertionSort,
+  mergeSort,
+  quickSort
+} = algorithms.sorting;
+
+const sortedArray = mergeSort([10, 6, 14, 3, 22, 4, 3, 8, 11, 12]);
 
 ```
