@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Merge Sort
+ * Quick Sort
  *
  * Time complexity
  * Best Case: O(n log n)
