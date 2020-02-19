@@ -23,6 +23,8 @@ Javascript Library of algorithms and data structures created to refine algorithm
     - insertionSort
     - mergeSort
     - quickSort
+  - search
+    - binarySearch
 
 ## Getting started
 Use the algo.min.js file found in the lib directory.
@@ -63,5 +65,14 @@ const {
 } = algorithms.sorting;
 
 const sortedArray = mergeSort([10, 6, 14, 3, 22, 4, 3, 8, 11, 12]);
+
+/**
+ * sorted array search algorithms
+ */
+const {
+  binarySearch
+} = algorithms.search;
+
+const value = binarySearch([2, 3, 4, 6, 8, 10, 11, 12, 14, 22], 12);
 
 ```

@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-  sorting: require('./sorting')
+  sorting: require('./sorting'),
+  search: require('./search')
 };
