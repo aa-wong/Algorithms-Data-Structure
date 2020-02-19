@@ -13,12 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aa-wong/algorithms.js"
+    "url": "https://github.com/aa-wong/algo.js"
   },
   "keywords": [
     "webpack",
     "es6",
-    "starter",
+    "algorithms",
+    "data structures",
     "library",
     "universal",
     "umd",
@@ -27,9 +28,9 @@
   "author": "Aaron Wong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aa-wong/algorithms.js/issues"
+    "url": "https://github.com/aa-wong/algo.js/issues"
   },
-  "homepage": "https://github.com/aa-wong/algorithms.js",
+  "homepage": "https://github.com/aa-wong/algo.js",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
