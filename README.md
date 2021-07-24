@@ -18,11 +18,12 @@ Javascript Library of algorithms and data structures created to refine algorithm
 
 * Algorithms
   - sorting
-    - selectionSort
     - bubbleSort
+    - heapSort
     - insertionSort
     - mergeSort
     - quickSort
+    - selectionSort
   - search
     - binarySearch
 

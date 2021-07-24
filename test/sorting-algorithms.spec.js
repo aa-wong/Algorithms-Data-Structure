@@ -13,7 +13,7 @@ const {
   insertionSort,
   mergeSort,
   quickSort,
-  selectionSort,
+  selectionSort
 } = algorithms.sorting;
 
 /**
