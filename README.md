@@ -58,11 +58,7 @@ const stack = new stacks.StackLinkedList();
  * Array Sorting Algorithms
  */
 const {
-  selectionSort,
-  bubbleSort,
-  insertionSort,
-  mergeSort,
-  quickSort
+  mergeSort
 } = algorithms.sorting;
 
 const sortedArray = mergeSort([10, 6, 14, 3, 22, 4, 3, 8, 11, 12]);
