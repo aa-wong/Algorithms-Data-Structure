@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = {
-  selectionSort: require('./selection'),
   bubbleSort: require('./bubble'),
+  heapSort: require('./heap'),
   insertionSort: require('./insertion'),
   mergeSort: require('./merge'),
-  quickSort: require('./quick')
+  quickSort: require('./quick'),
+  selectionSort: require('./selection')
 };
